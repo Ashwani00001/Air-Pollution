@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Air Pollution Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Air Pollution Data</h1>
+        
+        <label class="switch">
+            <input type="checkbox" id="toggleMode">
+            <span class="slider round"></span>
+        </label>
+        <p id="modeText">Manual Entry Mode</p>
+
+        
+        <form id="locationForm">
+            
+            <div id="manualMode">
+                <label style='color: black' for="latitude">Latitude:</label>
+                <input  type="text" id="latitude" required>
+                <label style='color: black' for="longitude">Longitude:</label>
+                <input  type="text" id="longitude" required>
+            </div>
+            
+            
+            <div id="cityMode" style="display: none;">
+                <label style='color:black ' for="country">Country:</label>
+                <input  type="text" id="country">
+                <label style='color: black' for="city">City:</label>
+                <input  type="text" id="city">
+            </div>
+            
+            <button type="submit">Get Air Pollution Data</button>
+        </form>
+        
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
